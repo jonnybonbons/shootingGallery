@@ -1,13 +1,16 @@
 public class Vertical extends Target
 {
-
-    public Vertical()
+    int vy;
+    public Vertical(int x, int y, int vy)
     {
+        this.x = x;
+        this.y = y;
+        this.vy = vy;
+        
     }
 
-    public int sampleMethod(int y)
+    void move()
     {
-        // put your code here
-        return x + y;
+         
     }
 }
