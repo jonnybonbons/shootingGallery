@@ -11,35 +11,13 @@ package.editor.height=187
 package.editor.width=480
 package.editor.x=555
 package.editor.y=27
-<<<<<<< Updated upstream
-package.numDependencies=1
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
->>>>>>> origin/master
-package.numTargets=3
-=======
 package.numDependencies=2
 package.numTargets=4
->>>>>>> Stashed changes
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
 target1.height=50
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-target1.name=Circular
-=======
-<<<<<<< HEAD
 target1.name=Vertical
-=======
-target1.name=Target
-target1.naviview.expanded=true
->>>>>>> origin/master
->>>>>>> origin/master
-=======
-target1.name=Vertical
->>>>>>> Stashed changes
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
@@ -52,31 +30,7 @@ target2.editor.x=1088
 target2.editor.y=362
 target2.height=50
 target2.name=Target
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-target1.x=70
-target1.y=70
-target2.editor.height=700
-target2.editor.width=900
-target2.editor.x=69
-target2.editor.y=50
-target2.height=50
-target2.name=Target
-=======
-target1.x=160
-target1.y=10
-target2.editor.height=700
-target2.editor.width=900
-target2.editor.x=178
-target2.editor.y=297
-target2.height=50
-target2.name=Horizontal
->>>>>>> origin/master
-=======
->>>>>>> Stashed changes
 target2.naviview.expanded=true
->>>>>>> origin/master
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
@@ -85,40 +39,11 @@ target2.x=160
 target2.y=10
 target3.editor.height=700
 target3.editor.width=900
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-target3.editor.x=70
-target3.editor.y=50
-target3.height=50
-target3.name=handsup
-=======
-target3.editor.x=80
-target3.editor.y=60
-=======
 target3.editor.x=178
 target3.editor.y=297
->>>>>>> Stashed changes
 target3.height=50
 target3.name=Horizontal
 target3.naviview.expanded=true
-<<<<<<< Updated upstream
-=======
-target2.width=90
-target2.x=70
-target2.y=70
-target3.appletHeight=500
-target3.appletWidth=500
-target3.editor.height=700
-target3.editor.width=618
-target3.editor.x=1183
-target3.editor.y=70
-target3.height=50
-target3.name=handsup
->>>>>>> origin/master
->>>>>>> origin/master
-target3.numberAppletParameters=0
-=======
->>>>>>> Stashed changes
 target3.showInterface=false
 target3.type=ClassTarget
 target3.typeParameters=
