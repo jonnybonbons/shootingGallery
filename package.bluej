@@ -6,26 +6,41 @@ dependency2.from=handsup
 dependency2.to=Vertical
 dependency2.type=UsesDependency
 objectbench.height=76
+<<<<<<< HEAD
 objectbench.width=668
 package.editor.height=400
 package.editor.width=560
 package.editor.x=29
 package.editor.y=30
 package.numDependencies=2
+=======
+objectbench.width=588
+package.editor.height=187
+package.editor.width=480
+package.editor.x=555
+package.editor.y=27
+package.numDependencies=1
+>>>>>>> origin/master
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=700
-target1.editor.width=900
-target1.editor.x=69
-target1.editor.y=50
+target1.editor.height=638
+target1.editor.width=832
+target1.editor.x=1088
+target1.editor.y=362
 target1.height=50
+<<<<<<< HEAD
 target1.name=Vertical
+=======
+target1.name=Target
+target1.naviview.expanded=true
+>>>>>>> origin/master
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
+<<<<<<< HEAD
 target1.x=70
 target1.y=70
 target2.editor.height=700
@@ -34,10 +49,21 @@ target2.editor.x=69
 target2.editor.y=50
 target2.height=50
 target2.name=Target
+=======
+target1.x=160
+target1.y=10
+target2.editor.height=700
+target2.editor.width=900
+target2.editor.x=178
+target2.editor.y=297
+target2.height=50
+target2.name=Horizontal
+>>>>>>> origin/master
 target2.naviview.expanded=true
 target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
+<<<<<<< HEAD
 target2.width=80
 target2.x=160
 target2.y=10
@@ -50,6 +76,19 @@ target3.editor.y=60
 target3.height=50
 target3.name=handsup
 target3.naviview.expanded=true
+=======
+target2.width=90
+target2.x=70
+target2.y=70
+target3.appletHeight=500
+target3.appletWidth=500
+target3.editor.height=700
+target3.editor.width=618
+target3.editor.x=1183
+target3.editor.y=70
+target3.height=50
+target3.name=handsup
+>>>>>>> origin/master
 target3.numberAppletParameters=0
 target3.showInterface=false
 target3.type=AppletTarget
