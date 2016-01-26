@@ -1,18 +1,7 @@
 public class Target
 {
-    int x,y;
-    double v,theta;
-    Target(int randx, int randy){
-        x = randx;
-        y = randy;
-        v = 10;
-    }
+    int x,y,w,h;
+    Target() {}
 
-    int getX() { return x; }
-    int getY() { return y; }
-
-    void move() {
-        if (x < 200) x += v;
-        if (x > 200) x -= v;
-    }
+    void move() {}
 }
