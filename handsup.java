@@ -7,12 +7,11 @@ import java.awt.event.*;
 public class handsup extends JApplet implements Runnable, MouseListener { 
     Thread t;   
     int timeStep = 100;
-    int booty = 1;
     ArrayList<Target> targets = new ArrayList();
     Random r = new Random();
    
     public void init() {
-        for (int i = 0; i < booty; i++){
+        for (int i = 0; i < 1; i++){
             int randx = r.nextInt(359);
             int randy = r.nextInt(359);
             targets.add(new Target(randx, randy));
