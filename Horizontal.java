@@ -1,9 +1,8 @@
 
 public class Horizontal extends Target
 {
-    int m = 0;
     int vx;
-    public Horizontal(int x, int y, int m) 
+    public Horizontal(int x, int y, int vx) 
     {
         this.x = x;
         this.y = y;
@@ -13,15 +12,15 @@ public class Horizontal extends Target
     public void move()
     {
         x += vx;
-        if (x >= 700)
+        if (x >= 500)
         {
             vx = -vx;
-            x = 699;
+            x = 499;
         }
-        if (x <= 400)
+        if (x <= 300)
         {
             vx = -vx;
-            x = 401;
+            x = 301;
         }
     }
 }

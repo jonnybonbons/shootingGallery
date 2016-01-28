@@ -8,22 +8,16 @@ dependency2.type=UsesDependency
 dependency3.from=handsup
 dependency3.to=Circular
 dependency3.type=UsesDependency
+dependency4.from=handsup
+dependency4.to=Horizontal
+dependency4.type=UsesDependency
 objectbench.height=76
-<<<<<<< Updated upstream
-objectbench.width=770
-package.editor.height=477
-package.editor.width=662
-package.editor.x=558
-package.editor.y=24
-package.numDependencies=3
-=======
 objectbench.width=588
-package.editor.height=187
+package.editor.height=271
 package.editor.width=480
-package.editor.x=26
-package.editor.y=28
-package.numDependencies=2
->>>>>>> Stashed changes
+package.editor.x=203
+package.editor.y=194
+package.numDependencies=4
 package.numTargets=5
 package.showExtends=true
 package.showUses=true
@@ -68,8 +62,8 @@ target3.x=320
 target3.y=30
 target4.editor.height=700
 target4.editor.width=900
-target4.editor.x=178
-target4.editor.y=297
+target4.editor.x=171
+target4.editor.y=137
 target4.height=50
 target4.name=Horizontal
 target4.naviview.expanded=true
@@ -81,16 +75,10 @@ target4.x=110
 target4.y=130
 target5.appletHeight=500
 target5.appletWidth=500
-target5.editor.height=700
-<<<<<<< Updated upstream
-target5.editor.width=1032
-target5.editor.x=359
-target5.editor.y=238
-=======
-target5.editor.width=815
-target5.editor.x=1105
-target5.editor.y=85
->>>>>>> Stashed changes
+target5.editor.height=742
+target5.editor.width=931
+target5.editor.x=840
+target5.editor.y=88
 target5.height=50
 target5.name=handsup
 target5.naviview.expanded=true
@@ -100,4 +88,4 @@ target5.type=AppletTarget
 target5.typeParameters=
 target5.width=80
 target5.x=70
-target5.y=0
+target5.y=10

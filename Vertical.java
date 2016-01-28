@@ -6,21 +6,20 @@ public class Vertical extends Target
         this.x = x;
         this.y = y;
         this.vy = vy;
-
     }
 
     void move()
     {
         y += vy;
-        if (y >= 1000) 
+        if (y <= 200) 
         {
             vy = -vy;
-            y = 999;
+            y = 201;
         }
-        if (y <= 700)
+        if (y >= 400)
         {
             vy = -vy;
-            y = 701;
+            y = 399;
         }
     }
 }

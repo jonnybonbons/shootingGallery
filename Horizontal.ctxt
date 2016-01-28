@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=x\ y\ m
+comment0.params=x\ y\ vx
 comment0.target=Horizontal(int,\ int,\ int)
 comment1.params=
 comment1.target=void\ move()
