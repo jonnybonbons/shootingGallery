@@ -2,7 +2,7 @@
 public class Circular extends Target
 { 
     
-    public Circular(int x, int y, double theta, int m, int n, int r)
+    public Circular(int x, int y, double theta, int r)
     {
         this.x = x;
         this.y = y;
