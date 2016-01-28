@@ -6,31 +6,35 @@ import java.awt.event.*;
 
 public class handsup extends JApplet implements Runnable, MouseListener { 
     Thread t;   
-    int timeStep = 100;
-<<<<<<< HEAD
-=======
+    int timeStep = 30;
     int vy = 1;
     int booty = 1;
->>>>>>> origin/master
     ArrayList<Target> targets = new ArrayList();
     Random r = new Random();
-   
+
     public void init() {
         for (int i = 0; i < 1; i++){
             int randx = r.nextInt(359);
             int randy = r.nextInt(359);
             targets.add(new Vertical(randx, randy, vy));
+            targets.add(new Circular(300,300,.1,300,300,30));
         }
-        resize(500,500);
+        resize(1000,1000);
         addMouseListener(this);
         t = new Thread(this);
         t.start();
     }
 
     public void paint (Graphics g) {
-        for (int i = 0; i < targets.size(); i++){
+
+        for (Target t: targets){
+            if (t instanceof Circular){
+                g.setColor(Color.red);
+                g.fillOval(t.x,t.y,30,30);
+
+            }
             g.setColor(Color.cyan);
-            g.fillOval(targets.get(i).getX(),targets.get(i).getY(), 200, 200);
+            //g.fillOval(targets.get(i).getX(),targets.get(i).getY(), 200, 200);
         }
     }
 
@@ -53,9 +57,9 @@ public class handsup extends JApplet implements Runnable, MouseListener {
     public void run() {
         try {
             while(true) {
-
-                // loop through the ArrayList, calling the move() method for each
-
+                for (int i = 0; i < targets.size(); i++){
+                    targets.get(i).move();
+                }
                 repaint();
                 t.sleep(timeStep);   
             }

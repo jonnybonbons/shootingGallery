@@ -2,12 +2,10 @@
 public class Circular extends Target
 { 
     
-    public Circular(int x, int y, int theta, int m, int n, int r)
+    public Circular(int x, int y, double theta, int m, int n, int r)
     {
         this.x = x;
         this.y = y;
-        this.m = m;
-        this.n = n;
         this.r = r;
         this.theta = theta;
     }
@@ -15,7 +13,8 @@ public class Circular extends Target
     
     void move()
     {
-        x = (int)(m + r * Math.cos(theta));
-        y = (int)(n + r * Math.sin(theta));
+        theta += .1;
+        x = (int)(r * Math.cos(theta));
+        y = (int)(r * Math.sin(theta));
     }
 }
