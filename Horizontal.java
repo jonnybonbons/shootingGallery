@@ -12,7 +12,6 @@ public class Horizontal extends Target
 
     public void move()
     {
-<<<<<<< Updated upstream
         x += vx;
         if (x >= 700)
         {
@@ -24,10 +23,5 @@ public class Horizontal extends Target
             vx = -vx;
             x = 401;
         }
-
-=======
-
-       
->>>>>>> Stashed changes
     }
 }
