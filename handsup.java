@@ -8,10 +8,14 @@ public class handsup extends JApplet implements Runnable, MouseListener {
     Thread t;   
     int timeStep = 30;
     int vy = 30;
+    int v = 30;
     int booty = 1;
+    int month = 0;
+    int day = 0;
+    int year = 0;
     ArrayList<Target> targets = new ArrayList();
     Random r = new Random();
-
+    
     public void init() {
         for (int i = 0; i < 1; i++){
             int randx = r.nextInt(359);
@@ -19,6 +23,7 @@ public class handsup extends JApplet implements Runnable, MouseListener {
             targets.add(new Vertical(randx, randy, vy));
             targets.add(new Horizontal(randx, randy, vy));
             targets.add(new Circular(300,300,.1,30));
+            targets.add(new Seeking(randx, randy, v));
         }
         resize(800,800);
         addMouseListener(this);
@@ -58,7 +63,7 @@ public class handsup extends JApplet implements Runnable, MouseListener {
         int x = e.getX();
         int y = e.getY();
     }
-
+    
     public void mousePressed(MouseEvent e) {}
 
     public void mouseReleased(MouseEvent e) {}
