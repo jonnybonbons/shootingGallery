@@ -1,9 +1,8 @@
 
-public class Circular extends Target
+public class CounterCircular extends Target
 { 
-    int m;
-    int n;
-    public Circular(int x, int y, int m, int n, double theta, int r)
+    int m ,n;
+    public CounterCircular(int x, int y, int m, int n, double theta, int r)
     {
         this.x = x;
         this.y = y;
@@ -16,7 +15,7 @@ public class Circular extends Target
     
     void move()
     {
-        theta += .1;
+        theta -= .3;
         x = m + (int)(r * Math.cos(theta));
         y = n + (int)(r * Math.sin(theta));
     }
