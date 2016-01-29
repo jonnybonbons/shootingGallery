@@ -18,7 +18,8 @@ public class handsup extends JApplet implements Runnable, MouseListener {
             int randy = r.nextInt(359);
             targets.add(new Vertical(randx, randy, vy));
             targets.add(new Horizontal(randx, randy, vy));
-            targets.add(new Circular(300,300,.1,30));
+            targets.add(new Circular(300,300,400,400,.1,30));
+            targets.add(new CounterCircular(300,300,400,400,.1,100));
         }
         resize(800,800);
         addMouseListener(this);
@@ -41,7 +42,7 @@ public class handsup extends JApplet implements Runnable, MouseListener {
     public void subpaint(Graphics g){
 
         for (Target t: targets){
-            if (t instanceof Circular){
+            if (t instanceof Circular || t instanceof CounterCircular){
                 g.setColor(Color.red);
             }
             if (t instanceof Horizontal || t instanceof Vertical){

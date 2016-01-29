@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=x\ y\ m\ n\ theta\ r
-comment0.target=Circular(int,\ int,\ int,\ int,\ double,\ int)
+comment0.target=CounterCircular(int,\ int,\ int,\ int,\ double,\ int)
 comment1.params=
 comment1.target=void\ move()
 numComments=2
