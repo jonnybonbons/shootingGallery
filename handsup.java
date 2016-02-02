@@ -17,8 +17,10 @@ public class handsup extends JApplet implements Runnable, KeyListener, MouseList
     Random r = new Random();
     boolean b = true;
     String s = "";
+    boolean whiteout = true;
 
     public void init() {
+        setFocusable(true);
         //         for (int i = 0; i < 1; i++){
         //             int randx = r.nextInt(359);
         //             int randy = r.nextInt(359);
@@ -54,9 +56,7 @@ public class handsup extends JApplet implements Runnable, KeyListener, MouseList
         Graphics offScreenG;
         Image offScreenI = null;
 
-        
         showStatus(""+b + " " + s); 
-        
         offScreenI = createImage(getWidth(), getHeight());
         offScreenG = offScreenI.getGraphics();
 
@@ -66,7 +66,11 @@ public class handsup extends JApplet implements Runnable, KeyListener, MouseList
     }
 
     public void subpaint(Graphics g){
-
+        if (whiteout == true){
+            g.setColor(Color.white);
+            g.fillRect(0,0,1420,880);
+            whiteout = false;
+        }
         for (Target t: targets){
             if (t instanceof Circular || t instanceof CounterCircular){
                 g.setColor(Color.red);
@@ -76,18 +80,24 @@ public class handsup extends JApplet implements Runnable, KeyListener, MouseList
             }
             g.fillOval(t.x,t.y,30,30);
         }
+        
 
     }
 
     public void clearScreen(){
         while (targets.size() > 0) targets.remove(0);
-        newtarget();
+        whiteout = true;
         repaint();
+        newtarget();
     }
 
     public void keyPressed(KeyEvent e){
         s+=e.getKeyChar();
-        if (e.getKeyChar() == 'c') {clearScreen(); b = false;}
+        if (e.getKeyChar() == 'c') {
+            clearScreen(); 
+            b = false;
+        }
+        repaint();
     }
 
     public void keyTyped(KeyEvent e){
@@ -98,15 +108,16 @@ public class handsup extends JApplet implements Runnable, KeyListener, MouseList
 
     public void mouseClicked(MouseEvent e) {
 
-        // loop through the ArrayList, remove any element clicked
-        b = true;
+        // loop through the ArrayList, remove any element clickedb = true;
         int x = e.getX();
         int y = e.getY();
     }
 
     public void mousePressed(MouseEvent e) {}
 
-    public void mouseReleased(MouseEvent e) {}
+    public void mouseReleased(MouseEvent e) {
+        b = true;
+    }
 
     public void mouseEntered(MouseEvent e) {}
 
