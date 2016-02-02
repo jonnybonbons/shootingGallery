@@ -8,27 +8,24 @@ public class handsup extends JApplet implements Runnable, MouseListener {
     Thread t;   
     int timeStep = 30;
     int vy = 30;
-    int v = 30;
+    double v = .05;
     int booty = 1;
     int month = 0;
     int day = 0;
     int year = 0;
     ArrayList<Target> targets = new ArrayList();
     Random r = new Random();
-    
+
     public void init() {
         for (int i = 0; i < 1; i++){
             int randx = r.nextInt(359);
             int randy = r.nextInt(359);
             targets.add(new Vertical(randx, randy, vy));
             targets.add(new Horizontal(randx, randy, vy));
-<<<<<<< HEAD
-            targets.add(new Circular(300,300,.1,30));
+            targets.add(new Circular(300,300,400, 400, .1,30));
             targets.add(new Seeking(randx, randy, v));
-=======
             targets.add(new Circular(300,300,400,400,.1,30));
             targets.add(new CounterCircular(300,300,400,400,.1,100));
->>>>>>> origin/master
         }
         resize(800,800);
         addMouseListener(this);
@@ -57,7 +54,11 @@ public class handsup extends JApplet implements Runnable, MouseListener {
             if (t instanceof Horizontal || t instanceof Vertical){
                 g.setColor(Color.green);
             }
+            if (t instanceof Seeking) {
+                g.setColor(Color.black);
+            }
             g.fillOval(t.x,t.y,30,30);
+            g.drawRect(380, 380, 40, 40);
         }
     }
 
@@ -68,7 +69,7 @@ public class handsup extends JApplet implements Runnable, MouseListener {
         int x = e.getX();
         int y = e.getY();
     }
-    
+
     public void mousePressed(MouseEvent e) {}
 
     public void mouseReleased(MouseEvent e) {}
@@ -84,7 +85,19 @@ public class handsup extends JApplet implements Runnable, MouseListener {
                     targets.get(i).move();
                 }
                 repaint();
-                t.sleep(timeStep);   
+                t.sleep(timeStep);
+
+                for (int i = 0; i < targets.size(); i++)
+                {
+                    Target t = targets.get(i);
+                    if(t instanceof Seeking){
+                        if (t.removal == true) {
+                            targets.remove(i);
+                        }
+                        t.move();
+                    }
+
+                }
             }
 
         } catch (InterruptedException e) {}

@@ -1,9 +1,10 @@
 public class Seeking extends Target
 {
-    double m;
-    int v = 0;
-    public Seeking(int x, int y, int v)
+    //m = 0.0;
+   
+    public Seeking(int x, int y, double v)
     {
+       removal = false;
        this.x = x;
        this.y = y;
        m = (double)(y - 400)/(x - 400);
@@ -11,10 +12,10 @@ public class Seeking extends Target
     
     public void move()
     {
-        x += m;
-        y += m*x;
-//         if (x > 380 && x < 420 && y > 380 && y < 420) {
-//             
-//         }
+        x++;
+        y += m;
+        if (x > 380 && x < 420 && y > 380 && y < 420) {
+            removal = true;
+        }
     }
 }

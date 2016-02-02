@@ -1,6 +1,8 @@
 public class Target
 {
-    int x,y,w,h,m,n,r;
+    int x,y,w,h,n,r;
+    boolean removal = false;
+    double m;
     double theta;
     Target() {}
 
